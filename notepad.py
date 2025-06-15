@@ -29,8 +29,8 @@ class Notepad(tk.Tk, UndoManagerObserver, ClipboardObserver):
         self.load_plugins()
 
         # model initialization
-        # self.model = TextEditorModel('A faza, stakla puna mraza\nDimi se zaza u limuzini nazad')
-        self.model = TextEditorModel('This is a sample text for the Notepad application.\nFeel free to edit it as you wish.')
+        self.model = TextEditorModel('A faza, stakla puna mraza\nDimi se zaza u limuzini nazad')
+        # self.model = TextEditorModel('This is a sample text for the Notepad application.\nFeel free to edit it as you wish.')
         self.undo_manager = UndoManager.get_instance()
         self.clipboard = ClipboardStack()
         self.text_editor = TextEditor(self, self.model, self.clipboard, self.undo_manager)
